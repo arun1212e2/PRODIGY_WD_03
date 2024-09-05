@@ -1,0 +1,123 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f9f9f9;
+    margin: 0;
+  }
+  
+  .game-container {
+    text-align: center;
+  }
+  
+  .board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    margin: 20px auto;
+  }
+  
+  .cell {
+    background-color: #fff;
+    border: 2px solid #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    cursor: pointer;
+    color: gray;
+    transition: color 0.2s ease;
+  }
+  
+  .cell.x::before {
+    content: 'X';
+    font-weight: bold;
+  }
+  
+  .cell.o::before {
+    content: 'O';
+    font-weight: bold;
+  }
+  
+  .board.x .cell:not(.o):hover::before,
+  .board.o .cell:not(.x):hover::before {
+    color: black;
+  }
+  
+  .cell.x {
+    color: black;
+  }
+  
+  .cell.o {
+    color: black;
+  }
+  
+ 
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f9f9f9;
+    margin: 0;
+  }
+  
+  .game-container {
+    text-align: center;
+  }
+  
+  .board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    margin: 20px auto;
+  }
+  
+  .cell {
+    background-color: #fff;
+    border: 2px solid #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    cursor: pointer;
+    color: gray;  /* Initially gray */
+    transition: color 0.2s ease;
+  }
+  
+  .cell.x::before {
+    content: 'X';
+    font-weight: bold;
+  }
+  
+  .cell.o::before {
+    content: 'O';
+    font-weight: bold;
+  }
+  
+  .board.x .cell:not(.o):hover::before,
+  .board.o .cell:not(.x):hover::before {
+    color: black;  /* Hover turns black */
+  }
+  
+  .cell.x, .cell.o {
+    color: black;  /* Turn black after placement */
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    display: none;  /* Initially hidden */
+    margin-top: 20px;
+  }
+  
+  button.show {
+    display: inline-block;  /* Show when needed */
+  }
+ 
